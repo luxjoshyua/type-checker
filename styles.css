@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Taviraj:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Trirong:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 @font-face {
   font-family: "Faune";
   font-weight: 400; 
@@ -22,8 +24,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background-color: #2a2a2a; 
-
   color: #fff; 
+  /* use 280px because it's the size of the sidebar */
   margin: 0 0 0 280px; 
 }
 
@@ -85,6 +87,10 @@ input[type="range"] {
   width: 100%; 
 }
 
+select {
+  width: 100%; 
+}
+
 textarea.output {
   font-size: 64px;
   /* 100% of where it can fit */
@@ -97,6 +103,44 @@ textarea.output {
   min-height: 100vh; 
   /* margin: 50px 0 0 150px;   */
   padding: 40px;  
+}
+
+
+div.colors {
+  /* make the a flex next to each other */
+  display: flex; 
+}
+
+div.colors div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.25); 
+  border-radius: 50%; 
+  text-align: center; 
+  margin: 5px 10px 0 0; 
+  transition: border 0.25s; 
+}
+
+
+div.colors div.selected {
+  border: 2px solid #fff; 
+}
+
+
+input[type="checkbox"] {
+  /* -webkit-appearance: none; is browser extension */
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 16px;
+  height: 16px; 
+  background-color: #575757; 
+  border-radius: 50%; 
+  outline: none;
+  transition: background-color 0.25s; 
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fff; 
 }
 
 
