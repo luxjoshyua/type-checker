@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Type Checker</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-
-<!-- command + hover for CSS definition-->
-
-<body>
-
-  <!-- left hand side -->
-  <section class="options">
-    <h1>
-      Type Checker
-    </h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Type Checker</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./styles.css" />
     
-    <div class="option">
-      <label>Your text</label>
-      <input type="text" name="sentence" placeholder="The quick brown fox...">
-    </div>
-  </section>
 
-  <!-- right hand side -->
-  <textarea class="output">
-    the quick brown fox jumps over the lazy dog
-  </textarea>
+  </head>
+
+  <!-- command + hover for CSS definition-->
+
+  <body>
+
+    <!-- left hand side -->
+    <section class="options">
+      <h1>
+        Type Checker
+      </h1>
+
+      <div class="option">
+        <label>Your text</label>
+        <input type="text" name="sentence" placeholder="The quick brown fox...">
+      </div>
+
+      <div class="option">
+        <label>Type size<span class="typesize-output">64px</span></label>
+        <input type="range" name="typesize" min=12 max=200 value=64>
+      </div>
+
+      <div class="option">
+        <label>Leading <span class="lineheight-output">1.5</span></label>
+        <input type="range" name="lineheight" min=0.75 max=2.5 value=1.5 step=0.25>
+      </div>
+
+      <div class="option option-checkbox">
+        <label>italic</label>
+        <!-- if add checked it will appear checked -->
+        <input type="checkbox" name="italic">
+      </div>
 
 
-  <script src="typechecker.js"></script>
+
+    </section>
+
+    <!-- right hand side -->
+    <!-- removes the linebreak by having all on one line -->
+    <textarea class="output">the quick brown fox jumps over the lazy dog</textarea>
+
+
+    <script src="typechecker.js"></script>
 
 
 
-</body>
+  </body>
 
 </html>

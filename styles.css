@@ -17,16 +17,14 @@
   src: url(assets/faune-bold.woff2), url(assets/faune-bold.woff);
 }
 
-
 body {
-  margin: 0;
   font-family: "Faune", Arial; 
   font-size: 16px;
   line-height: 1.6;
   background-color: #2a2a2a; 
 
   color: #fff; 
-  margin: 40px 40px 40px 320px;
+  margin: 0 0 0 280px; 
 }
 
 body,
@@ -52,12 +50,25 @@ h1 {
 }
 
 div.option {
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
+}
+
+div.option-checkbox {
+  /* makes appear next to each other */
+  display: flex;
+  /* moves them apart */
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 label {
   display: block; 
   margin: 0 0 5px 0; 
+}
+
+label span {
+  float: right; 
+  font-style: italic; 
 }
 
 input[type="text"] {
@@ -69,11 +80,24 @@ input[type="text"] {
   padding: 5px 7px 5px 7px; 
 }
 
-textarea.output {
-  font-size: 64px;
-   
+
+input[type="range"] {
+  width: 100%; 
 }
 
+textarea.output {
+  font-size: 64px;
+  /* 100% of where it can fit */
+  width: 100%;
+  background: none; 
+  color: #fff;
+  border: none; 
+  outline: none; 
+  /* fills the area */
+  min-height: 100vh; 
+  /* margin: 50px 0 0 150px;   */
+  padding: 40px;  
+}
 
 
 
